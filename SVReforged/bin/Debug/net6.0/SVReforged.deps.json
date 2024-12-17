@@ -1,0 +1,43 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "SVReforged/1.0.0": {
+        "dependencies": {
+          "MonoGame.Framework.WindowsDX": "3.8.1.263",
+          "Pathoschild.Stardew.ModBuildConfig": "4.3.2"
+        },
+        "runtime": {
+          "SVReforged.dll": {}
+        }
+      },
+      "MonoGame.Framework.WindowsDX/3.8.1.263": {},
+      "Pathoschild.Stardew.ModBuildConfig/4.3.2": {}
+    }
+  },
+  "libraries": {
+    "SVReforged/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MonoGame.Framework.WindowsDX/3.8.1.263": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-eVpLlTT741r2Sq+WWAse6x8rIL3gJKyhmvCp1ZxZb7O0qde22v/0PS3CGxRc26SUSnrohA/xM5swU80kXye83A==",
+      "path": "monogame.framework.windowsdx/3.8.1.263",
+      "hashPath": "monogame.framework.windowsdx.3.8.1.263.nupkg.sha512"
+    },
+    "Pathoschild.Stardew.ModBuildConfig/4.3.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wRnRRTgB84YPyNIGFpI12Gdjfwery/JTgRbTboG0uJK5VJsuQ2VWT4fS4bcvPgOKMK8lqYyqxV7sEq7zgd60gQ==",
+      "path": "pathoschild.stardew.modbuildconfig/4.3.2",
+      "hashPath": "pathoschild.stardew.modbuildconfig.4.3.2.nupkg.sha512"
+    }
+  }
+}

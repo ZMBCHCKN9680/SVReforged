@@ -1,0 +1,9 @@
+C:\Users\admin\RiderProjects\SVReforged\SVReforged\bin\Debug\net6.0\SVReforged.deps.json
+C:\Users\admin\RiderProjects\SVReforged\SVReforged\bin\Debug\net6.0\SVReforged.dll
+C:\Users\admin\RiderProjects\SVReforged\SVReforged\obj\Debug\net6.0\SVReforged.csproj.AssemblyReference.cache
+C:\Users\admin\RiderProjects\SVReforged\SVReforged\obj\Debug\net6.0\SVReforged.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\admin\RiderProjects\SVReforged\SVReforged\obj\Debug\net6.0\SVReforged.AssemblyInfoInputs.cache
+C:\Users\admin\RiderProjects\SVReforged\SVReforged\obj\Debug\net6.0\SVReforged.AssemblyInfo.cs
+C:\Users\admin\RiderProjects\SVReforged\SVReforged\obj\Debug\net6.0\SVReforged.csproj.CoreCompileInputs.cache
+C:\Users\admin\RiderProjects\SVReforged\SVReforged\obj\Debug\net6.0\SVReforged.dll
+C:\Users\admin\RiderProjects\SVReforged\SVReforged\bin\Debug\net6.0\assets\views\sampleView.sml
