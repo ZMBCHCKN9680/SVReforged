@@ -1,13 +1,7 @@
-<lane z-index="1" orientation="vertical">
-    <lane orientation="horizontal">
-        <tab *repeat={Tabs} layout="64px" tooltip={Name} active={<>Active} activate=|^OnTabActivated(Name)|>
+<lane orientation="vertical" horizontal-content-alignment="start">
+    <lane orientation="horizontal" horizontal-content-alignment="start">
+        <tab *repeat={Tabs} layout="64px" tooltip={tabName} active={<>IfTabActive} activate=|^OnTabActivatedSetOtherTabsInactive(tabIndex)|>
             <image layout="32px" sprite={Sprite} vertical-alignment="middle" />
         </tab>
     </lane>
-    
-    <frame 
-        layout="880px 600px" 
-        background={@Mods/StardewUI/Sprites/ControlBorder}>
-        <label text="tab name" />
-    </frame>
 </lane>
