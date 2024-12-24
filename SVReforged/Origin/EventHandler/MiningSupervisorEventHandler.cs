@@ -5,8 +5,6 @@ namespace SVReforged.EventHandler;
 
 public class MiningSupervisorEventHandler
 {
-    public EventHandlerEnum.EventHandlerName eventHandlerName => EventHandlerEnum.EventHandlerName.MINING_SUPERVISOR_FURNACE_CRYSTALARIUM_LOAD;
-
     public static void InitiaizeEventListener()
     {
         ModEntry.SHelper.Events.Content.AssetRequested += OnAssetRequested;

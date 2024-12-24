@@ -5,8 +5,6 @@ namespace SVReforged.EventHandler;
 
 public class EnergyConsultantEventHandler
 {
-    public EventHandlerEnum.EventHandlerName eventHandlerName => EventHandlerEnum.EventHandlerName.ENERGY_CONSULTANT_FURNACE_LOAD;
-
     public static void InitiaizeEventListener()
     {
         ModEntry.SHelper.Events.Content.AssetRequested += OnAssetRequested;

@@ -5,8 +5,6 @@ namespace SVReforged.EventHandler;
 
 public class SiteAcquisitionLeadEventHandler
 {
-    public EventHandlerEnum.EventHandlerName eventHandlerName => EventHandlerEnum.EventHandlerName.SITE_AQUISITION_LEAD_BUILDING_LOAD;
-
     public static void InitiaizeEventListener()
     {
         ModEntry.SHelper.Events.Content.AssetRequested += OnAssetRequested;

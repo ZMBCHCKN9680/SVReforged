@@ -1,5 +1,6 @@
 ﻿using StardewModdingAPI;
 using StardewUI.Framework;
+
 namespace SVReforged;
 
 public class ModEntry : Mod
@@ -16,5 +17,6 @@ public class ModEntry : Mod
         SModManifest = ModManifest;
         var introDriver = new Intro.Intro();
         //var originDriver = new Origin.Origin();
+        var skillDriver = new Skills.Skills();
     }
 }
