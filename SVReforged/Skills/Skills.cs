@@ -1,8 +1,12 @@
-﻿using SpaceCore;
+﻿using HarmonyLib;
+using SpaceCore;
 using StardewModdingAPI;
 using StardewModdingAPI.Events;
 using StardewValley;
+using StardewValley.Quests;
+using StardewValley.SpecialOrders.Rewards;
 using SVReforged.Skills.EventHandler;
+using SVReforged.Skills.HarmonyPatches;
 
 namespace SVReforged.Skills;
 
@@ -19,18 +23,44 @@ public class Skills
 
     public void OnSaveLoaded(object sender, SaveLoadedEventArgs e)
     {
-        Game1.player.friendshipData["Robin"].Points = 800;
-        StopFriendshipDecayEventHandler.InitiaizeEventListener();
+        //Game1.player.friendshipData["Robin"].Points = 800;
+        //StopFriendshipDecayEventHandler.InitiaizeEventListener();
     }
 
     public void OnDayStarted(object sender, DayStartedEventArgs e)
     {
-        ModEntry.SMonitor.Log("Robin friendship : " + Game1.player.friendshipData["Robin"].Points, LogLevel.Info);
-        //Game1.player.AddCustomSkillExperience(skill, 101);
+        
+        Game1.player.AddCustomSkillExperience(skill, 101);
+        
         var level = Game1.player.GetCustomSkillLevel(skill);
-        if (level >= 1) //stop friendship decay
+        if (level >= 1)
         {
+            FriendshipMailEventHandler.InitiaizeEventListener();
+            Game1.addMailForTomorrow("myMailName");
         }
+        if (level >= 1)
+        {
+            // FriendshipMailEventHandler.InitiaizeEventListener();
+            // Game1.addMailForTomorrow("myMailName");
+        }
+        // if (level >= 1)
+        // {
+        //     var harmony = new Harmony(ModEntry.SModManifest.UniqueID);
+        //     var targetMethod = AccessTools.Method(typeof(NPC), "receiveGift");
+        //     var prefix = AccessTools.Method(typeof(GiftVarietyBuffPatch), "Prefix");
+        //     harmony.Patch(targetMethod, new HarmonyMethod(prefix), null);
+        // }
+        // if (level >= 1) //increase quest reward
+        // {
+        //     var harmony = new Harmony(ModEntry.SModManifest.UniqueID);
+        //     var targetMethod = AccessTools.Method(typeof(Quest), "GetMoneyReward");
+        //     var postfix = AccessTools.Method(typeof(IncreasedQuestMoneyRewardPatch1), "Postfix");
+        //     harmony.Patch(targetMethod, null, new HarmonyMethod(postfix));
+        //     
+        //     var targetMethod2 = AccessTools.Method(typeof(MoneyReward), "GetRewardMoneyAmount");
+        //     var postfix2 = AccessTools.Method(typeof(IncreasedQuestMoneyRewardPatch2), "Postfix");
+        //     harmony.Patch(targetMethod2, null, new HarmonyMethod(postfix2));
+        // }
         // if (level >= 1) //Birthday notification
         // {
         //     foreach (GameLocation? location in Game1.locations)

@@ -1,0 +1,10 @@
+﻿{
+  "Name": "SVReforged",
+  "Author": "ZMBCHCKN",
+  "Version": "1.0.0",
+  "Description": "SVReforged",
+  "UniqueID": "SVReforged",
+  "EntryDll": "SVReforged.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": []
+}

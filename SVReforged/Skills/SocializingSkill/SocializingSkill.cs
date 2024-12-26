@@ -1,4 +1,7 @@
-﻿namespace SVReforged.Skills.SocializingSkill;
+﻿using StardewModdingAPI;
+using StardewValley;
+
+namespace SVReforged.Skills.SocializingSkill;
 
 public class SocializingSkill : SpaceCore.Skills.Skill
 {
@@ -18,4 +21,23 @@ public class SocializingSkill : SpaceCore.Skills.Skill
     {
         return SocializingSkillName;
     }
+
+    public override void DoLevelPerk(int level)
+    {
+        if (level == 2)
+        {
+            foreach (GameLocation? location in Game1.locations)
+            {
+                foreach (NPC? character in location.characters)
+                {
+                    String name = character.Name;
+                    String chestID = "zmbchckn.SVReforged.NPCGiftHistoryGlobalChest_"+name;
+                    Game1.player.team.GetOrCreateGlobalInventory(chestID);
+                    ModEntry.SMonitor.Log($"Created chest for {name}", LogLevel.Info);
+                }
+            }
+        }
+    }
+    
+    
 }
