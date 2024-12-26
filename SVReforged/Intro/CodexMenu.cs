@@ -7,7 +7,7 @@ namespace SVReforged.Intro;
 
 public class CodexMenu : IClickableMenu
 {
-    private readonly string viewAssetPrefix = "Mods/SVReforged/Views";
+    private readonly string viewAssetPrefix = "Mods/SVReforged/views";
     private readonly IViewEngine viewEngine;
 
     public CodexMenu()
