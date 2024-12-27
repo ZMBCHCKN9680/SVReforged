@@ -1,8 +1,4 @@
-﻿using System.Reflection;
-using HarmonyLib;
-using StardewModdingAPI;
-using StardewValley;
-using StardewValley.Quests;
+﻿using HarmonyLib;
 using StardewValley.SpecialOrders.Rewards;
 
 namespace SVReforged.Skills.HarmonyPatches;
@@ -13,6 +9,6 @@ public static class IncreasedQuestMoneyRewardPatch2
 {
     private static void Postfix(ref int __result)
     {
-        __result = (int)((float)__result * 1.25f);
+        __result = (int)(__result * 1.25f);
     }
 }

@@ -17,6 +17,7 @@
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
     </ItemGroup>
+
     <ItemGroup>
         <Reference Include="SpaceCore">
             <HintPath>$(GamePath)\Mods\SpaceCore\SpaceCore.dll</HintPath>
@@ -30,4 +31,28 @@
     <PropertyGroup Condition="'$(Configuration)' == 'Release'">
         <OutputPath>bin\Release\</OutputPath>
     </PropertyGroup>
+
+    <!-- Define the files to copy -->
+    <ItemGroup>
+        <ModFiles Include="..\[CP] SVReforged\**\*"/>
+    </ItemGroup>
+    <ItemGroup>
+        <Folder Include="..\[CP] SVReforged\assets\CodePatch\">
+            <Link>[CP] SVReforged\assets\CodePatch</Link>
+        </Folder>
+    </ItemGroup>
+
+    <!-- Post-build task -->
+    <Target Name="PostBuild" AfterTargets="Build">
+        <!-- Remove the existing directory -->
+        <RemoveDir Directories="$(GamePath)\Mods\[CP] SVReforged"/>
+
+        <!-- Create the directory if it doesn't exist -->
+        <MakeDir Directories="$(GamePath)\Mods\[CP] SVReforged"/>
+
+        <!-- Copy the files -->
+        <Copy SourceFiles="@(ModFiles)"
+              DestinationFolder="$(GamePath)\Mods\[CP] SVReforged\%(RecursiveDir)"/>
+    </Target>
+
 </Project>

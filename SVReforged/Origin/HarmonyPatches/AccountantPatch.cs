@@ -8,8 +8,6 @@ namespace SVReforged.HarmonyPatches;
 
 public class AccountantPatch
 {
-    public PatchEnum.PatchName patchName => PatchEnum.PatchName.ACCOUNTANT_PASSIVE;
-
     public static void ApplyPatch()
     {
         var harmony = new Harmony(ModEntry.SModManifest.UniqueID);

@@ -25,19 +25,13 @@ public class SocializingSkill : SpaceCore.Skills.Skill
     public override void DoLevelPerk(int level)
     {
         if (level == 2)
-        {
-            foreach (GameLocation? location in Game1.locations)
+            foreach (var location in Game1.locations)
+            foreach (var character in location.characters)
             {
-                foreach (NPC? character in location.characters)
-                {
-                    String name = character.Name;
-                    String chestID = "zmbchckn.SVReforged.NPCGiftHistoryGlobalChest_"+name;
-                    Game1.player.team.GetOrCreateGlobalInventory(chestID);
-                    ModEntry.SMonitor.Log($"Created chest for {name}", LogLevel.Info);
-                }
+                var name = character.Name;
+                var chestID = "zmbchckn.SVReforged.NPCGiftHistoryGlobalChest_" + name;
+                Game1.player.team.GetOrCreateGlobalInventory(chestID);
+                ModEntry.SMonitor.Log($"Created chest for {name}", LogLevel.Info);
             }
-        }
     }
-    
-    
 }

@@ -1,12 +1,6 @@
-﻿using HarmonyLib;
-using SpaceCore;
-using StardewModdingAPI;
+﻿using SpaceCore;
 using StardewModdingAPI.Events;
 using StardewValley;
-using StardewValley.Quests;
-using StardewValley.SpecialOrders.Rewards;
-using SVReforged.Skills.EventHandler;
-using SVReforged.Skills.HarmonyPatches;
 
 namespace SVReforged.Skills;
 
@@ -29,20 +23,20 @@ public class Skills
 
     public void OnDayStarted(object sender, DayStartedEventArgs e)
     {
-        
         Game1.player.AddCustomSkillExperience(skill, 101);
-        
+
         var level = Game1.player.GetCustomSkillLevel(skill);
-        if (level >= 1)
-        {
-            FriendshipMailEventHandler.InitiaizeEventListener();
-            Game1.addMailForTomorrow("myMailName");
-        }
+
         if (level >= 1)
         {
             // FriendshipMailEventHandler.InitiaizeEventListener();
             // Game1.addMailForTomorrow("myMailName");
         }
+        // if (level >= 1)
+        // {
+        //     FriendshipMailEventHandler.InitiaizeEventListener();
+        //     Game1.addMailForTomorrow("myMailName");
+        // }
         // if (level >= 1)
         // {
         //     var harmony = new Harmony(ModEntry.SModManifest.UniqueID);

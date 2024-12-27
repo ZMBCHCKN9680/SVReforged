@@ -5,8 +5,6 @@ namespace SVReforged.HarmonyPatches;
 
 public class SalesExecutivePatch
 {
-    public PatchEnum.PatchName patchName => PatchEnum.PatchName.SALES_EXECUTIVE_PASSIVE;
-
     public static void ApplyPatch()
     {
         var harmony = new Harmony(ModEntry.SModManifest.UniqueID);

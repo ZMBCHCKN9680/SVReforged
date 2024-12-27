@@ -1,0 +1,12 @@
+﻿{
+  "Name": "[CP] SVReforged",
+  "Author": "ZMBCHCKN",
+  "Version": "1.0.0",
+  "Description": "SVReforged.CP",
+  "UniqueID": "SVReforged.CP",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": [],
+  "ContentPackFor": {
+    "UniqueID": "Pathoschild.ContentPatcher"
+  }
+}

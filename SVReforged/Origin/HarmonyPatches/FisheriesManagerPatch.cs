@@ -7,8 +7,6 @@ namespace SVReforged.HarmonyPatches;
 
 public class FisheriesManagerPatch
 {
-    public PatchEnum.PatchName patchName => PatchEnum.PatchName.FISHERIES_MANAGER_PASSIVE;
-
     public static void ApplyPatch()
     {
         var constructor = AccessTools.Constructor(

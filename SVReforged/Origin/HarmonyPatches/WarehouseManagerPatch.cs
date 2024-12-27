@@ -5,8 +5,6 @@ namespace SVReforged.HarmonyPatches;
 
 public class WarehouseManagerPatch
 {
-    public PatchEnum.PatchName patchName => PatchEnum.PatchName.WAREHOUSE_MANAGER_PASSIVE;
-
     public static void ApplyPatch()
     {
         var harmony = new Harmony(ModEntry.SModManifest.UniqueID);
